@@ -1,7 +1,5 @@
 #! /bin/bash
-
-sudo snap install code
-
+which docker && exit 0
 # installing docker
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 
@@ -21,10 +19,7 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-
 sudo groupadd docker
-sudo usermod -aG docker ubuntu
-
+sudo usermod -aG docker $USER 
 newgrp docker
-
 echo "log out and log in again to see the effects"
