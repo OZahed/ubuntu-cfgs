@@ -9,7 +9,7 @@ grep 'gca' ~/.zshrc && echo "exits" || echo alias gca="git add . --all && git co
 grep 'gp' ~/.zshrc && echo "exits" || echo alias gp="git pull"
 grep 'mcd ()' ~/.zshrc && echo "exits" || echo 'mcd () { [ ! -d $1 ] && mkdir -p $1; cd $1 }' >> ~/.zshrc
 grep 'edit-zsh' ~/.zshrc && echo "exits" || echo "edit-zsh () { vim ~/.zshrc ; source ~/.zshrc }" >> ~/.zshrc
-
+grep 'glog' ~/.zshrc && echo "exits" || echo 'alias glog="git log --oneline --graph"' >> ~/.zshrc
 
 read -p "did you install the nerd font and set one one of them to the default font?(y/n)" NERD
 [ $NERD != "y" ] && echo "nerd fonts are not installed" && exit 127 
