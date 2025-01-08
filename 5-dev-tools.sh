@@ -1,4 +1,14 @@
 #! /bin/bash
+
+which rgrep || sudo apt install ripgrep
+which ipython3 || sudo apt install ipython3
+which code || sudo snap install code
+which zig || snap install zig --classic --beta
+which nvim && [ ! -d ~/.config/nvim ] && git clone https://github.com/NvChad/starter ~/.config/nvim
+
+which ollama || read -p "install ollama?(y/n) " OLLAMA
+[ $OLLAMA == "y" ] && curl -fsSL https://ollama.com/install.sh | sh
+
 which docker && exit 0
 # installing docker
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
