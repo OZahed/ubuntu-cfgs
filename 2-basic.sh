@@ -26,7 +26,7 @@ which go && echo "go is installed"  || {
 
 # installing rust
 
-which g++ || sudo apt install -y gcc g++
+which g++ && echo "g++ exits" || sudo apt install -y gcc g++
 
 which cargo || {
 	echo "cargo not found going to install it ..."
