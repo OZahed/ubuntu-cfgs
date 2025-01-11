@@ -5,8 +5,8 @@
 grep 'alias vim' ~/.zshrc && echo "exists" || echo alias vim="nvim" >> ~/.zshrc
 grep 'alias ll' ~/.zshrc && echo "exists" || echo alias ll="eza -lah" >> ~/.zshrc
 grep 'alias eza' ~/.zshrc && echo "exits" || echo alias eza="eza --icons --git" >> ~/.zshrc
-grep 'gca' ~/.zshrc && echo "exits" || echo alias gca="git add . --all && git commit"
-grep 'gp' ~/.zshrc && echo "exits" || echo alias gp="git pull"
+grep 'gca' ~/.zshrc && echo "exits" || echo alias gca="git add . --all && git commit" >> ~/.zshrc
+grep 'gp' ~/.zshrc && echo "exits" || echo alias gp="git pull" >> ~/.zshrc
 grep 'mcd ()' ~/.zshrc && echo "exits" || echo 'mcd () { [ ! -d $1 ] && mkdir -p $1; cd $1 }' >> ~/.zshrc
 grep 'edit-zsh' ~/.zshrc && echo "exits" || echo "edit-zsh () { vim ~/.zshrc ; source ~/.zshrc }" >> ~/.zshrc
 grep 'glog' ~/.zshrc && echo "exits" || echo 'alias glog="git log --oneline --graph"' >> ~/.zshrc
