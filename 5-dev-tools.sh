@@ -4,6 +4,7 @@ which rgrep || sudo apt install ripgrep
 which ipython3 || sudo apt install ipython3
 which code || sudo snap install code
 which zig || snap install zig --classic --beta
+which zed || curl -f https://zed.dev/install.sh | sh
 which nvim && [ ! -d ~/.config/nvim ] && git clone https://github.com/NvChad/starter ~/.config/nvim
 
 which ollama || read -p "install ollama?(y/n) " OLLAMA
