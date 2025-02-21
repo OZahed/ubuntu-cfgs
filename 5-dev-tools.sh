@@ -1,6 +1,5 @@
 #! /bin/bash
 
-which nvim
 which rgrep || sudo apt install ripgrep
 which ipython3 || sudo apt install ipython3
 which code || sudo snap install code
